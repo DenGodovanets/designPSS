@@ -1,0 +1,72 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?oi0yyf');
+  src:  url('fonts/icomoon.eot?oi0yyf#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?oi0yyf') format('truetype'),
+    url('fonts/icomoon.woff?oi0yyf') format('woff'),
+    url('fonts/icomoon.svg?oi0yyf#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-PROscooters-2:before {
+  content: "\e900";
+}
+.icon-facebook-app-logo:before {
+  content: "\e901";
+}
+.icon-instagram-logo:before {
+  content: "\e902";
+}
+.icon-instagram-symbol:before {
+  content: "\e903";
+}
+.icon-PROscootersT:before {
+  content: "\e904";
+}
+.icon-shopping_cart-24px:before {
+  content: "\e905";
+}
+.icon-stay_current_portrait-24px:before {
+  content: "\e906";
+}
+.icon-youtube:before {
+  content: "\e907";
+}
+.icon-cart:before {
+  content: "\e93a";
+}
+.icon-airplane:before {
+  content: "\e9af";
+}
+.icon-truck:before {
+  content: "\e9b0";
+}
+.icon-star-full:before {
+  content: "\e9d9";
+}
+.icon-facebook:before {
+  content: "\ea90";
+}
+.icon-facebook2:before {
+  content: "\ea91";
+}
+.icon-whatsapp:before {
+  content: "\ea93";
+}
