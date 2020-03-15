@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="../../../assets/fonts//style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <div class="head desktop-header">
+            <div class="container">
+                <div class="beanies">
+                    <div>
+                        <span class="icon icon-stay_current_portrait-24px"></span>
+                        <a href="tel:+380954113354">38 (095) 411 33 54</a>
+                    </div>
+                    <div class="language">
+                        <span><a href='aaa'>UA</a></span>
+                        <span>|</span>
+                        <span><a href='aaa'> RU</a></span>
+                    </div>
+                </div>
+                <div class="logo-side">
+                    <a href="/" title="proscooters.com.ua"><span class="icon logo icon-proscooters"></span></a>
+                    <div class="search-wrapper d-flex justify-content-between align-items-end col-5">
+                        <a href="https://www.instagram.com/proscootersua" class=" mr-3 mb-1">
+                            <span class="icon icon-instagram-symbol "></span></a>
+                        <div class="input-group input-group-sm mb-3 mr-3">
+                            <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="пошук">
+                        </div>
+                        <a href="#">
+                            <span class="icon icon-shopping_cart-24px mb-2" title="2025грн">
+                            <span class="number-items-in-cart">1</span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <nav>
+                    <ul>
+                        <li class="menu-list active">
+                            <a href="/asdasd">Самокати</a>
+                        </li>
+                        <li class="menu-list">
+                            <a href="/asdasd">Деки</a>
+                        </li>
+                        <li class="menu-list">
+                            <a href="/asdasd">Рули</a>
+
+                            <div class="sub-menu">
+                                <ul class="container">
+                                    <li><a href="#">Защита</a></li>
+                                    <li><a href="#">Шлеми</a></li>
+                                    <li><a href="#">Другое</a></li>
+                                    <li><a href="#">Защита</a></li>
+                                    <li><a href="#">Шлеми</a></li>
+                                    <li><a href="#">Другое</a></li>
+                                    <li><a href="#">Защита</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="menu-list">
+                            <a href="/asdasd">Вилки</a>
+                        </li>
+                        <li class="menu-list">
+                            <a href="/asdasd">Колеса</a>
+                        </li>
+                        <li class="menu-list">
+                            <a href="/asdasd">Зажими</a>
+                        </li>
+                        <li class="menu-list">
+                            <a href="/asdasd">Scs</a>
+                        </li>
+
+                        <li class="menu-list">
+                            <a href="/asdasd">Пеги</a>
+                        </li>
+                        <li class="menu-list">
+                            <a href="/asdasd">Гріпси</a>
+                        </li>
+                        <li class="menu-list">
+                            <a href="/asdasd">Наждаки</a>
+                        </li>
+                        <li class="menu-list">
+                            <a href="/asdasd">Другое</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <!-- MOBILE MENU -->
+
+        <div class="mobile-header">
+            <div class="mobile-beanie">
+                <a href="https://www.instagram.com/proscootersua">
+                    <span class="icon icon-instagram-symbol "></span></a>
+                <div>
+                    <span class="icon icon-stay_current_portrait-24px"></span>
+                    <a href="tel:+380954113354">38 (095) 411 33 54</a>
+                </div>
+                <div class="language">
+                    <span><a href='aaa'>UA</a></span>
+                    <span>|</span>
+                    <span><a href='aaa'>RU</a></span>
+                </div>
+            </div>
+            <div class="logo-side">
+                <nav id="mySidebar" class="sidebar mobile-menu">
+                    <div class="nav-header d-flex justify-content-between">
+                        <span class="icon-proscootersT" title="proscooters"></span>
+                        <a href="javascript:void(0)" class="closebtn" onclick="user.closeNav()">×</a>
+                    </div>
+                    <li>
+                        <div>
+                            <a href="#123" class="d-flex justify-content-between">
+                                <span>Самокати</span>
+                                <span class="icon-circle-down"></span>
+                            </a>
+                            <ul class="mobile-submenu">
+                                <li><a href="#444">Ethic</a></li>
+                                <li><a href="#444">Самокати</a></li>
+                                <li><a href="#44">Самокати</a></li>
+                                <li><a href="#44">Самокати</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <a href="#123" class="d-flex justify-content-between">
+                                <span>Самокати</span>
+                                <span class="icon-circle-down"></span>
+                            </a>
+                            <ul class="mobile-submenu">
+                                <li><a href="#444">Ethic</a></li>
+                                <li><a href="#444">Самокати</a></li>
+                                <li><a href="#44">Самокати</a></li>
+                                <li><a href="#44">Самокати</a></li>
+                            </ul>
+                        </div>
+
+                    </li>
+                    <li>
+                        <div>
+                            <a href="#123" class="d-flex justify-content-between">
+                                <span>Самокати</span>
+                                <span class="icon-circle-down"></span>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <a href="#123" class="d-flex justify-content-between">
+                                <span>Самокати</span>
+                                <span class="icon-circle-down"></span>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <a href="#123" class="d-flex justify-content-between">
+                                <span>Самокати</span>
+                                <span class="icon-circle-down"></span>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <a href="#123" class="d-flex justify-content-between">
+                                <span>Самокати</span>
+                                <span class="icon-circle-down"></span>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <a href="#123" class="d-flex justify-content-between">
+                                <span>Самокати</span>
+                                <span class="icon-circle-down"></span>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <a href="#123" class="d-flex justify-content-between">
+                                <span>Самокати</span>
+                                <span class="icon-circle-down"></span>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <a href="#123" class="d-flex justify-content-between">
+                                <span>Самокати</span>
+                                <span class="icon-circle-down"></span>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <a href="#123" class="d-flex justify-content-between">
+                                <span>Самокати</span>
+                                <span class="icon-circle-down"></span>
+                            </a>
+                        </div>
+                    </li>
+                </nav>
+                <div id="main">
+                    <button class="openbtn" onclick="user.openNav()">☰</button>
+                </div>
+                <a href="/" title="proscooters.com.ua">
+                    <div class="icon-proscootersT"></div>
+                </a>
+                <div class="input-group input-group-sm">
+                    <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="пошук">
+                </div>
+                <a href="#">
+                    <span class="icon-shopping_cart-24px" title="2025грн">
+                    <span class="item-in-cart">1</span>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- MOBILE MENU -->
+
+    <!-- MAIN -->
+
+    <div class="myBlock"></div>
+
+
+
+    <!-- breadcrumb -->
+
+    <div class="bread container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Proscooters</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Library</li>
+            </ol>
+        </nav>
+    </div>
+
+    <!-- ITEM -->
+
+    <div class="item container">
+
+        <div>
+
+            <div class=image-wrapper>
+                <div class="more-image"></div>
+                <img class="image" src="http://proscooters.com.ua/image/cache/catalog/2020/Root/Wheel/Root%20Honeycore%20Wheel%20120/root_industries_honeycore_120_wheel_coppertone-459x459.jpg" alt="wheels">
+
+            </div>
+
+            <div class="item-info">
+                <div class="title">
+                    <h1>Ethic Legion Fork SCS HIC BlackChrome</h1>
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+    <!-- FOOTER -->
+
+    <footer>
+        <div class="container">
+            <ul>
+                <li>
+                    <h5>
+                        Инфо
+                    </h5>
+                </li>
+                <li>
+                    <a href="#">О магазине</a>
+                </li>
+                <li>
+                    <a href="#">Оплата / Доставка</a>
+                </li>
+                <li>
+                    <a href="#">Гарантия / Возврат</a>
+                </li>
+                <li>
+                    <a href="#">Оптовая продажа</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <h5>Proscooters</h5>
+                </li>
+                <li>
+                    <a href="#"></a>
+                </li>
+                <li><span class="icon-telegram"></span>
+                    <a href="tel:+380954113354">38 (095) 411 33 54</a>
+                </li>
+                <li><a href="mailto:info@proscooters.com.ua">info@proscooters.com.ua</a></li>
+
+                <li>
+                    <span class="icon-alarm"></span>
+                    <span>пн-сб 10:00 - 19:00</span>
+                </li>
+                <li class="social">
+                    <a href="https://www.instagram.com/proscootersua">
+                        <span class="icon-instagram-symbol"></span>
+                    </a>
+
+                    <a href="#">
+                        <span class="icon-youtube-square"></span>
+                    </a>
+
+                    <a href="https://www.facebook.com/proscootersua">
+                        <span class="icon-facebook-app-logo"></span>
+                    </a>
+                </li>
+                <li></li>
+            </ul>
+        </div>
+        <div class="bottom-logo">
+            <div class="logo-wrapper">
+                <a href="./"><span class="icon-proscooters"></span></a>
+            </div>
+        </div>
+
+
+    </footer>
+
+    <!-- FOOTER -->
+
+    <script>
+        class User {
+
+            constructor() {
+                this.initPage()
+            }
+
+            initPage() {
+                // this.checkNewItemQnt();
+                // this.showHiddenText();
+                this.showSubMenu();
+                // this.openDropSorting();
+
+            }
+
+            openNav() {
+                document.getElementById("mySidebar").style.width = "280px";
+                document.getElementById("main").style.marginLeft = "280px";
+            }
+
+            closeNav() {
+                document.getElementById("mySidebar").style.width = "0";
+                document.getElementById("main").style.marginLeft = "0";
+            }
+
+            // checkNewItemQnt() {
+            //     let list = [...document.querySelector(".items").children];
+            //     const checkWidth = (screenSize) => {
+            //         if (screenSize <= 991) {
+            //             list.slice(6).forEach(element => element.remove());
+            //         }
+            //         if (screenSize <= 414) {
+            //             list.slice(4).forEach(element => element.remove());
+            //         }
+            //     }
+            //     checkWidth(window.screen.availWidth)
+            //     window.addEventListener("resize", function(event) {
+            //         checkWidth(window.screen.availWidth)
+            //     });
+
+            // }
+
+            // showHiddenText() {
+            //     let show = false;
+
+            //     let showHidden = document.querySelector('.show-hidden');
+            //     showHidden.innerHTML = 'Читать все';
+            //     let text = document.querySelector('.proscooters-info')
+
+            //     showHidden.addEventListener('click', () => {
+            //         if (!show) {
+            //             text.style = "height:auto; -webkit-mask-image:none";
+            //             showHidden.innerHTML = 'Скрить';
+
+            //         } else {
+            //             text.style = "height:20vh;-webkit-mask-image: -webkit-gradient(linear, left 20%, left bottom, from(black), to(rgba(0, 0, 0, 0)))";
+            //             showHidden.innerHTML = 'Читать все';
+            //         }
+            //         show = !show
+
+            //     })
+            // }
+
+            showSubMenu() {
+                const li = [...mySidebar.children];
+                li.forEach(li => {
+                    if (li.querySelector('.icon-circle-down')) {
+                        let checkSubmenu = li.querySelector('.mobile-submenu') ? 'block' : "none";
+                        li.querySelector('.icon-circle-down').style = `display: ${checkSubmenu}`;
+                    }
+                    li.addEventListener("click", (e) => {
+                        if (e.target.className === 'icon-circle-down') {
+                            e.preventDefault();
+                            e.target.style = "transform: rotate(180deg);transition: 0.3s";
+                            e.currentTarget.querySelector('.mobile-submenu').style = "display:block";
+                            e.target.className = 'icon-circle-down clicked';
+                            return;
+                        };
+                        if (e.target.className === 'icon-circle-down clicked') {
+                            e.preventDefault();
+                            e.target.style = "transform: rotate(0deg);transition: 0.3s";
+                            e.currentTarget.querySelector('.mobile-submenu').style = "display:none";
+                            e.target.className = 'icon-circle-down'
+                            return;
+                        }
+                    })
+
+                })
+            }
+
+
+            // openDropSorting() {
+
+            //     const showCheckboxSorting = [...document.querySelectorAll('.drop-down')]
+
+            //     showCheckboxSorting.forEach(dropDown => dropDown.addEventListener('click', (e) => {
+            //         if (!event.target.closest(".wrapper")) {
+            //             return
+            //         };
+
+            //         const ul = dropDown.querySelector('.select-checkbox');
+
+            //         if (!ul.className.includes('show')) {
+            //             ul.classList.add("show")
+
+            //         } else {
+
+            //             ul.classList.remove("show")
+            //             ul.classList.remove("show")
+            //         }
+            //     }));
+            //     document.addEventListener("click", function(event) {
+            //         if (event.target.closest(".drop-down")) {
+            //             return
+            //         }
+            //         showCheckboxSorting.forEach(dropDown => {
+            //             const ul = dropDown.querySelector('.select-checkbox');
+            //             ul.classList.remove("show")
+            //         });
+            //     });
+            //     const buttonSorting = [...document.querySelectorAll('.confirm-sorting')];
+            //     buttonSorting.forEach(button => button.addEventListener('click', () => {
+            //         showCheckboxSorting.forEach(dropDown => {
+            //             const ul = dropDown.querySelector('.select-checkbox');
+            //             ul.classList.remove("show")
+            //         });
+            //     }))
+            // }
+        }
+        const user = new User();
+    </script>
+
+</body>
+
+</html>

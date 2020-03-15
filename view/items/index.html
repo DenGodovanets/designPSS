@@ -253,38 +253,20 @@
     <!-- <h1> -->
     <div class="title container">
         <h1>Трюкові самокати</h1>
+        <div class="show-sorting">
+            <span>Фильтри</span>
+            <span class="icon-menu2"></span>
+        </div>
     </div>
 
     <!-- Sorting -->
 
     <div class="sorting container">
+
+
         <div class="desktop-sorting">
-            <div class="drop-down">
-                <div class="wrapper d-flex justify-content-between align-items-center">
-                    <span>Производитель</span>
-                    <span class="icon-circle-down"></span>
-                </div>
-                <div class="select-checkbox">
-                    <ul>
-                        <li>
-                            <input type="checkbox" id="ethic">
-                            <label for="ethic">
-                                <span>ethic</span>
-                                <span class="quantity">(5)</span> 
-                            </label>
-                        </li>
-                        <li>
-                            <input type="checkbox" id="mgp">
-                            <label for="mgp">
-                                <span>mgp</span>
-                                <span class="quantity">(10)</span> 
-                            </label>
-                        </li>
-                    </ul>
 
-                    <button type="button" class="confirm-sorting">Вибрать</button>
-                </div>
-            </div>
+
 
             <div class="drop-down">
                 <div class="wrapper d-flex justify-content-between align-items-center">
@@ -391,9 +373,54 @@
                     </ul>
 
                     <button type="button" class="confirm-sorting">Вибрать</button>
+                </div>
+            </div>
+
+            <div class="drop-down">
+                <div class="wrapper d-flex justify-content-between align-items-center">
+                    <span>Производитель</span>
+                    <span class="icon-circle-down"></span>
+                </div>
+                <div class="select-checkbox">
+                    <ul>
+                        <li>
+                            <input type="checkbox" id="ethic">
+                            <label for="ethic">
+                                <span>ethic</span>
+                                <span class="quantity">(5)</span> 
+                            </label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="mgp">
+                            <label for="mgp">
+                                <span>mgp</span>
+                                <span class="quantity">(10)</span> 
+                            </label>
+                        </li>
+                    </ul>
+
+                    <button type="button" class="confirm-sorting">Вибрать</button>
+                </div>
+            </div>
+
+            <div class="drop-down ">
+                <div class="wrapper d-flex justify-content-between align-items-center">
+                    <span>Рейтинг</span>
+                    <span class="icon-circle-down"></span>
+                </div>
+                <div class="select-checkbox">
+                    <ul class="deskop-rating">
+                        <li> От дорогих к дешевым </li>
+                        <li> Популярные </li>
+                        <li> Новинки </li>
+                        <li> Акционные </li>
+                        <li> По рейтингу </li>
+                    </ul>
                 </div>
             </div>
         </div>
+
+        <!-- MOBILE SORTING -->
         <div class="mobile-sorting">
             <div class="filter">
                 <div data-toggle="modal" data-target="#filter">
@@ -537,6 +564,19 @@
         </div>
     </div>
 
+    <!-- <div class="ratting-deskop container d-flex justify-content-end">
+        <div class="dropdown">
+            <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Dropdown button
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+        </div>
+    </div> -->
+
     <div class="items container">
         <div class="row row-cols-2 row-cols-sm-3 row-cols-md-3 row-cols-lg-4 items">
             <a href="asdas">
@@ -580,7 +620,7 @@
             <a href="asdas">
                 <div class="col mb-4 parametrs-visible">
                     <div class="card" title="Root T Oversized Black">
-                        <img src="http://proscooters.com.ua/image/cache/catalog/2020/Grit%20/Scooter/Grit%20Fluxx%20Scooter/171823_watermarked_grit-500x500.jpg" class="card-img-top" alt="...">
+                        <img src="http://proscooters.com.ua/image/cache/catalog/2019/Aztek/Fork/Aztek%20Templar%20Fork%20Ivory/templar_fork_-_aqua-500x500.jpg" class="card-img-top" alt="...">
                         <div class="sale-icon"><span>-10%</span></div>
                         <div class="new-icon"><span>NEW</span></div>
                         <div class="card-body">
@@ -965,7 +1005,6 @@
                     </a>
                 </li>
                 <li></li>
-
             </ul>
         </div>
         <div class="bottom-logo">
@@ -987,10 +1026,11 @@
             }
 
             initPage() {
-                this.checkNewItemQnt();
+                // this.checkNewItemQnt();
                 this.showHiddenText();
                 this.showSubMenu();
                 this.openDropSorting();
+                this.showSorting();
 
             }
 
@@ -1002,6 +1042,16 @@
             closeNav() {
                 document.getElementById("mySidebar").style.width = "0";
                 document.getElementById("main").style.marginLeft = "0";
+            }
+
+            showSorting() {
+                const showhideSorting = document.querySelector('.show-sorting');
+                const sortingContainer = document.querySelector('.desktop-sorting');
+                showhideSorting.addEventListener('click', () => {
+                    sortingContainer.classList.value = sortingContainer.classList.value.includes('show') ?
+                        'desktop-sorting' : 'desktop-sorting show'
+                })
+
             }
 
             checkNewItemQnt() {
@@ -1087,7 +1137,7 @@
                     } else {
 
                         ul.classList.remove("show")
-                        ul.classList.remove("show")
+
                     }
                 }));
                 document.addEventListener("click", function(event) {

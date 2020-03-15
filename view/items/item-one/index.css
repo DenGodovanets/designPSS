@@ -1,0 +1,435 @@
+body {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-family: monospace;
+}
+
+body a {
+    color: white;
+    text-decoration: none;
+}
+
+body a:hover {
+    color: rgb(145, 145, 145);
+    text-decoration: none;
+}
+
+body .icon:hover {
+    color: rgb(145, 145, 145);
+}
+
+body header .container {
+    max-width: 1600px;
+}
+
+header .desktop-header {
+    display: block;
+}
+
+header .mobile-header {
+    display: none;
+}
+
+header .head {
+    background-color: rgba(0, 0, 0, .85);
+    color: white;
+}
+
+header .beanies {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 14px;
+    height: 30px;
+}
+
+header .beanies>* {
+    margin-left: 3%
+}
+
+header .beanies .icon {
+    font-size: 15px;
+}
+
+header .head .logo-side {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: 5px;
+    height: 60px;
+    border-bottom: 1px solid white;
+}
+
+header .head .logo-side .logo.icon-proscooters {
+    font-size: 35px;
+}
+
+header .head .logo-side .logo-phone {
+    font-size: 250px;
+    display: none;
+}
+
+header .head .logo-side .input-group {
+    height: 15px;
+    font-size: 8px;
+}
+
+header .head .logo-side .input-group input {
+    background-color: transparent;
+    height: 25px;
+    border: none;
+    color: white;
+}
+
+header .head .logo-side .icon {
+    font-size: 23px;
+}
+
+header .head .logo-side .input-group input:focus {
+    box-shadow: 0 0 0 1px white;
+}
+
+header .head .logo-side .input-group input:hover {
+    box-shadow: 0 0 0 1px white;
+}
+
+header .head .logo-side .icon-shopping_cart-24px {
+    position: relative;
+}
+
+header .head .logo-side .icon-shopping_cart-24px .number-items-in-cart {
+    font-size: 12px;
+    position: absolute;
+    top: -10px;
+    right: -3px;
+}
+
+header .head nav {
+    display: flex;
+}
+
+header .head nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    font-size: 15px;
+    padding: 0;
+    margin: 0;
+}
+
+header .head nav ul li {
+    padding: 10px;
+}
+
+header .head nav>ul>li:hover {
+    -moz-box-shadow: inset 0 -1px 0 0 white;
+    -webkit-box-shadow: inset 0 -1px 0 0 white;
+    box-shadow: inset 0 -1px 0 0 white;
+}
+
+header .head nav>ul>li.active {
+    -moz-box-shadow: inset 0 -1px 0 0 white;
+    -webkit-box-shadow: inset 0 -1px 0 0 white;
+    box-shadow: inset 0 -1px 0 0 white;
+}
+
+header .head nav ul li .sub-menu {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-top: 10px;
+    background-color: rgba(129, 114, 114, 0.9);
+    opacity: 0;
+    visibility: hidden;
+    transition-property: opacity, visibility;
+    transition-duration: 0.3s;
+    transition-delay: 0.15s;
+}
+
+header .head nav ul li .sub-menu ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+header .head nav ul li:hover .sub-menu {
+    opacity: 1;
+    visibility: visible;
+    z-index: 1;
+}
+
+
+/* MOBILE  menu*/
+
+@media screen and (max-width: 760px) {
+    header .desktop-header {
+        display: none;
+    }
+    header .mobile-header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: white;
+        background-color: rgba(0, 0, 0, .85);
+    }
+    .mobile-header .mobile-beanie {
+        border-bottom: 1px solid white;
+        height: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 13px;
+        padding: 0 10px;
+    }
+    .mobile-header .mobile-beanie .icon {
+        font-size: 15px;
+    }
+    .mobile-header .logo-side {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-size: 35px;
+        padding: 10px 0;
+    }
+    .mobile-header .logo-side>* {
+        margin-right: 2%
+    }
+    .mobile-header .logo-side .icon-shopping_cart-24px {
+        position: relative;
+    }
+    .mobile-header .logo-side .icon-shopping_cart-24px .item-in-cart {
+        font-size: 10px;
+        position: absolute;
+        top: -10px;
+        right: -3px;
+    }
+    .mobile-header .input-group {
+        width: 75%;
+    }
+    .mobile-header .input-group input {
+        background-color: transparent;
+        height: 20px;
+        border: none;
+        color: white;
+    }
+    .mobile-header .input-group input:focus {
+        box-shadow: 0 0 0 1px white;
+    }
+    .mobile-header .input-group input:hover {
+        box-shadow: 0 0 0 1px white;
+    }
+    .mobile-header .sidebar {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: white;
+        overflow-x: hidden;
+        transition: 0.5s;
+        list-style: none;
+    }
+    .mobile-header .sidebar .nav-header {
+        padding: 10px 5px 10px 20px;
+        border-bottom: 1px solid rgba(221, 218, 218, 0.479);
+        align-items: flex-end;
+    }
+    .mobile-header .sidebar .icon-proscootersT {
+        color: black;
+        font-size: 55px;
+    }
+    .mobile-header .sidebar a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 20px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+        cursor: pointer;
+    }
+    .mobile-header .sidebar a:hover:not(.closebtn) {
+        background-color: rgba(221, 218, 218, 0.479);
+        opacity: .4;
+        color: black;
+        ;
+    }
+    .mobile-header .sidebar li ul {
+        list-style: none;
+        display: none;
+        margin: 0;
+    }
+    .mobile-header .sidebar li ul a {
+        font-size: 18px;
+        padding: 5px 5px;
+    }
+    .mobile-header .sidebar li .icon-circle-down {
+        line-height: unset;
+    }
+    .mobile-header .sidebar .closebtn {
+        font-size: 36px;
+    }
+    .mobile-header .openbtn {
+        font-size: 20px;
+        cursor: pointer;
+        background-color: transparent;
+        color: white;
+        border: none;
+    }
+    .mobile-header .openbtn:hover {
+        background-color: #444;
+    }
+    .mobile-header #main {
+        transition: margin-left .5s;
+        display: flex;
+        align-items: center;
+    }
+    .icon-shopping_cart-24px {
+        font-size: 20px;
+    }
+}
+
+
+/* MAIN */
+
+.myBlock {
+    /* background-image: url(./assets/maxresdefault.jpg);
+    height: 70vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-top: -125px;
+    position: relative;
+    z-index: -1; */
+}
+
+
+/* breadcrumb */
+
+.bread.container {
+    max-width: 1600px;
+}
+
+.bread .breadcrumb {
+    background-color: white;
+    font-size: 14px;
+}
+
+.bread .breadcrumb a {
+    color: black;
+}
+
+
+/* ITEM */
+
+.item.container {
+    max-width: 1600px;
+    padding: 1rem 2rem;
+    display: flex;
+}
+
+.item .image-wrapper {
+    width: 50vh;
+}
+
+.item .image {
+    width: 100%;
+    height: auto;
+}
+
+.container h1 {
+    font-size: 22px;
+}
+
+@media screen and (max-width: 760px) {
+    /* .container h1 {
+        text-align: center;
+    } */
+}
+
+
+/* sorting */
+
+
+/* FOOTER */
+
+footer {
+    margin-top: 30px;
+}
+
+footer .container {
+    max-width: 1600px;
+    border-top: 1px solid rgba(145, 145, 145, 0.3);
+    display: flex;
+    justify-content: space-around;
+}
+
+footer ul a {
+    color: #212529;
+    font-size: 15px;
+}
+
+footer ul {
+    list-style: none;
+    margin: 30px 0;
+    font-size: 15px;
+}
+
+footer ul li {
+    margin-top: 5px;
+}
+
+footer li.social a {
+    font-size: 25px;
+    color: rgb(145, 145, 145);
+    margin-right: 15px;
+}
+
+footer li.social a:hover {
+    color: black;
+}
+
+footer li.social .icon-youtube-square {
+    font-size: 27px;
+}
+
+footer .bottom-logo {
+    display: flex;
+    justify-content: center;
+}
+
+footer .bottom-logo .logo-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    font-size: 30px;
+    border-top: 1px solid rgba(145, 145, 145, 0.3);
+    width: 50vw;
+}
+
+footer .bottom-logo .logo-wrapper a {
+    color: rgb(145, 145, 145)
+}
+
+footer .bottom-logo a:hover {
+    color: black;
+}
+
+@media screen and (max-width: 760px) {
+    footer .container {
+        display: flex;
+        align-items: flex-start;
+    }
+    footer ul {
+        margin: 10px 0px;
+        padding: 0 0 0 20px;
+    }
+    footer ul h5 {
+        border-bottom: 1px solid rgba(145, 145, 145, 0.3);
+        padding-bottom: 10px;
+    }
+    footer .bottom-logo .logo-wrapper {
+        width: 100vw;
+    }
+}
