@@ -329,7 +329,7 @@ header .head nav ul li:hover .sub-menu {
 }
 
 .item.container .image-wrapper {
-    width: 45vw;
+    width: 35vw;
 }
 
 .item.container .container {
@@ -365,7 +365,7 @@ header .head nav ul li:hover .sub-menu {
 }
 
 .item.container .next {
-    right: 0;
+    right: 9px;
     border-radius: 3px 0 0 3px;
     color: gray;
 }
