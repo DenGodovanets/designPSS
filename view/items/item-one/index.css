@@ -395,6 +395,7 @@ header .head nav ul li:hover .sub-menu {
 
 .item.container .row {
     margin: 5px 0;
+    justify-content: center;
 }
 
 .item.container .row:after {
