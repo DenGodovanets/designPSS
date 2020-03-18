@@ -359,7 +359,7 @@ header .head nav ul li:hover .sub-menu {
     margin-top: -50px;
     color: gray;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 15px;
     border-radius: 0 3px 3px 0;
     user-select: none;
     -webkit-user-select: none;
@@ -430,12 +430,14 @@ header .head nav ul li:hover .sub-menu {
     flex-direction: column;
     align-items: center;
     font-size: 25px;
+    font-weight: bold;
 }
 
 .item.container .item-info .old-price {
     font-size: 15px;
     text-decoration: line-through;
     color: gray;
+    font-weight: normal;
 }
 
 .item.container .item-info h1 {
@@ -450,6 +452,42 @@ header .head nav ul li:hover .sub-menu {
     flex-direction: column;
     align-items: center;
     font-size: 15px;
+    text-align: center;
+}
+
+.item.container .item-info .article {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    color: gray;
+    font-size: 12px;
+}
+
+.item.container .item-info .form-control {
+    width: 100%;
+    height: 45px;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.item.container .item-info .form-control:focus {
+    /* border-color: #e12726; */
+    box-shadow: 0 0 0 0.1rem rgba(70, 61, 61, 0.671);
+}
+
+.item.container .item-info button {
+    width: 100%;
+    background-color: #e12726;
+    height: 50px;
+    border-radius: 0;
+}
+
+.item.container .item-info button:hover {
+    background-color: black;
+}
+
+.item.container .item-info .description li {
+    margin-top: 5px;
 }
 
 
@@ -465,7 +503,41 @@ header .head nav ul li:hover .sub-menu {
 }
 
 @media screen and (max-width: 760px) {
+    .item.container {
+        flex-direction: column;
+    }
     .item.item.container .image-wrapper {
+        width: 100%;
+    }
+    .prev,
+    .next {
+        display: none
+    }
+    .item.container .item-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .item.container .item-info .price {
+        margin: 2rem;
+    }
+    .item.container .item-info h1 {
+        font-size: 20px;
+    }
+    .item.container .item-info .description {
+        /* align-items: flex-start; */
+        padding: 0 1rem;
+        font-size: 14px;
+    }
+    .item.container .item-info .article {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        color: gray;
+        font-size: 12px;
+    }
+    .item.container .item-info button {
         width: 100%;
     }
 }
