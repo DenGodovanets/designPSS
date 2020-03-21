@@ -260,22 +260,22 @@
             <div class="container move-image">
 
                 <!-- Full-width images with number text -->
-                <div class="mySlides">
-                    <div class="numbertext">1 / 6</div>
-                    <img src="http://proscooters.com.ua/image/cache/catalog/2020/Root/Wheel/Root%20Lotus%20110%20Wheel%20/root-wheels-lotus-110mm-459x459.jpg" style="width:100%" alt="image">
+                <div class="mySlider-wrapper">
+                    <div class="mySlides">
+                        <div class="numbertext">1 / 6</div>
+                        <img src="http://proscooters.com.ua/image/cache/catalog/2020/Root/Wheel/Root%20Lotus%20110%20Wheel%20/root-wheels-lotus-110mm-459x459.jpg" style="width:100%" alt="image">
+                    </div>
+
+                    <div class="mySlides">
+                        <div class="numbertext">2 / 6</div>
+                        <img src="http://360rideshop.com/image/cache/catalog/2018/wakeboarding/Wakebord/Hyperlite/wakeboard-hyperlite-pbj-5-800x800.jpg" style="width:100%" alt="image2">
+                    </div>
+
+                    <div class="mySlides">
+                        <div class="numbertext">3 / 6</div>
+                        <img src="http://proscooters.com.ua/image/cache/catalog/2020/AO%20/%20Scooter/AO%20Maven%20Scooter/maven-2020-green-side-m-459x459.jpg" style="width:100%" alt="image3">
+                    </div>
                 </div>
-
-                <div class="mySlides">
-                    <div class="numbertext">2 / 6</div>
-                    <img src="http://360rideshop.com/image/cache/catalog/2018/wakeboarding/Wakebord/Hyperlite/wakeboard-hyperlite-pbj-5-800x800.jpg" style="width:100%" alt="image2">
-                </div>
-
-                <div class="mySlides">
-                    <div class="numbertext">3 / 6</div>
-                    <img src="http://proscooters.com.ua/image/cache/catalog/2020/AO%20/%20Scooter/AO%20Maven%20Scooter/maven-2020-green-side-m-459x459.jpg" style="width:100%" alt="image3">
-                </div>
-
-
 
                 <!-- Next and previous buttons -->
                 <a class="prev" onclick="img.plusSlides(-1)"><span class="icon-arrow-left2"></span></a>
@@ -287,7 +287,7 @@
                 </div>
 
                 <!-- Thumbnail images -->
-                <div class="row">
+                <div class="row change-img">
                     <div class="column">
                         <img class="demo cursor" src="http://proscooters.com.ua/image/cache/catalog/2020/Root/Wheel/Root%20Lotus%20110%20Wheel%20/root-wheels-lotus-110mm-459x459.jpg" style="width:100%" onclick="img.currentSlide(1)" alt="Title of item">
                     </div>
@@ -563,7 +563,9 @@
                 var min_y = 40; //min y swipe for vertical swipe
                 var max_y = 50; //max y difference for horizontal swipe
 
-                const ele = document.querySelector('.move-image');
+                const ele = document.querySelector('.mySlider-wrapper');
+                const scrollElement = document.querySelector('.change-img');
+                const scrollTopElement = document.querySelector('.desktop-header');
 
 
                 ele.addEventListener('touchstart', function(e) {
@@ -586,6 +588,33 @@
                             this.plusSlides(1)
                         }
                     }
+                    //vertical detection
+                    if ((((swipe_det.eY - min_y > swipe_det.sY) || (swipe_det.eY + min_y < swipe_det.sY)) && ((swipe_det.eX < swipe_det.sX + max_x) && (swipe_det.sX > swipe_det.eX - max_x)))) {
+                        if (swipe_det.eY > swipe_det.sY) {
+                            console.error(top)
+
+                            window.scrollBy({
+                                top: -400, // could be negative value
+                                left: 0,
+                                behavior: 'smooth'
+                            });
+
+
+                        } else {
+                            // scrollElement.scrollIntoView({
+                            //     behavior: "smooth",
+                            //     block: "start",
+                            //     inline: "nearest"
+                            // });
+
+                            window.scrollBy({
+                                top: 400, // could be negative value
+                                left: 0,
+                                behavior: 'smooth'
+                            });
+                        }
+                    }
+
 
                 }, false);
             }
