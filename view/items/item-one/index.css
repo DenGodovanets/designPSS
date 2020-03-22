@@ -334,6 +334,14 @@ header .head nav ul li:hover .sub-menu {
     width: 35vw;
 }
 
+.item.container .image-wrapper .stars {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+    font-size: 24px;
+}
+
 .item.container .container {
     position: relative;
 }
@@ -448,12 +456,13 @@ header .head nav ul li:hover .sub-menu {
     text-align: center;
 }
 
-.item.container .item-info .brand-logo {
+
+/* .item.container .item-info .brand-logo {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
+} */
 
 .item.container .item-info .description {
     margin-top: 15px;
@@ -502,11 +511,18 @@ header .head nav ul li:hover .sub-menu {
     margin-top: 5px;
 }
 
+.item.container .item-info .badge-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3rem;
+}
 
-/* .item.container .item-info .description h5 {
-    font-size: 20px;
-    font-weight: 600;
-} */
+.item.container .item-info .badge {
+    font-size: 12px;
+    color: gray;
+}
 
 @media (min-width: 760px) and (max-width: 1400px) {
     .item.container .item-info {
@@ -542,7 +558,6 @@ header .head nav ul li:hover .sub-menu {
         font-size: 20px;
     }
     .item.container .item-info .description {
-        /* align-items: flex-start; */
         padding: 0 1rem;
         font-size: 14px;
     }
@@ -555,6 +570,16 @@ header .head nav ul li:hover .sub-menu {
     }
     .item.container .item-info button {
         width: 100%;
+    }
+    .item.container .item-info .badge-wrapper {
+        margin-top: 1rem;
+        flex-wrap: wrap;
+    }
+    .item.container .item-info .badge-wrapper .img-wrapper {
+        flex-basis: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: row-reverse;
     }
 }
 
