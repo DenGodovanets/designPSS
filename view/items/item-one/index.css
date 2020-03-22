@@ -326,11 +326,12 @@ header .head nav ul li:hover .sub-menu {
     max-width: 1600px;
     /* padding: 1rem 2rem; */
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    /* width: 60vw; */
 }
 
 .item.container .image-wrapper {
-    width: 30vw;
+    width: 35vw;
 }
 
 .item.container .container {
@@ -421,8 +422,9 @@ header .head nav ul li:hover .sub-menu {
 .item.container .item-info {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
+    width: 35vw;
 }
 
 .item.container .item-info .price {
@@ -430,7 +432,7 @@ header .head nav ul li:hover .sub-menu {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    font-size: 25px;
+    font-size: 35px;
     font-weight: bold;
 }
 
@@ -443,6 +445,14 @@ header .head nav ul li:hover .sub-menu {
 
 .item.container .item-info h1 {
     font-size: 30px;
+    text-align: center;
+}
+
+.item.container .item-info .brand-logo {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .item.container .item-info .description {
@@ -454,6 +464,7 @@ header .head nav ul li:hover .sub-menu {
     align-items: center;
     font-size: 15px;
     text-align: center;
+    color: gray;
 }
 
 .item.container .item-info .article {
@@ -498,8 +509,11 @@ header .head nav ul li:hover .sub-menu {
 } */
 
 @media (min-width: 760px) and (max-width: 1400px) {
+    .item.container .item-info {
+        width: 50vw;
+    }
     .item.item.container .image-wrapper {
-        width: 40vw;
+        width: 50vw;
     }
 }
 
@@ -519,6 +533,7 @@ header .head nav ul li:hover .sub-menu {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        width: 100%;
     }
     .item.container .item-info .price {
         margin: 2rem;

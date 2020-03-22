@@ -307,7 +307,8 @@
                 <div class="new-price">2000 грн</div>
                 <div class="old-price">2300 грн</div>
             </div>
-            <h1>Proto OrionTH Neck Black</h1>
+            <h1>Addict Defender V2 Scooter Black Scooter Black Scooter Black Scooter Black</h1>
+
             <ul class="description">
                 <li>Уровень катания: Средний</li>
                 <li>Руль: CrMo(Хром), Висота 610х519 мм,</li>
@@ -324,30 +325,36 @@
                 <li>Совместимость диаметров колес с вилкой: 100,</li>
                 <li>Общая высота: 85 см</li>
             </ul>
+            <div class="brand-logo">
+                <div class="stars">
+                    <span class="icon-star-full "></span>
+                    <span class="icon-star-full"></span>
+                    <span class="icon-star-full"></span>
+                    <span class="icon-star-full"></span>
+                    <span class="icon-star-full icon-star-empty"></span>
+                </div>
+                <img src="http://proscooters.com.ua/image/cache/catalog/Brands_logo/Lucky.png-80x80.jpeg" alt="ethic">
+            </div>
 
-            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Количество">
+            <!-- <div class="stars">
+                <span class="icon-star-full "></span>
+                <span class="icon-star-full"></span>
+                <span class="icon-star-full"></span>
+                <span class="icon-star-full"></span>
+                <span class="icon-star-full icon-star-empty"></span>
+            </div>
+            <div class="status">
+                <span class="availability">Нет в наличии</span>
+                <span class="fast-shipping">Бистра доставка</span>
+                <span class="present">Подарок</span>
+            </div> -->
 
+            <input type="text" pattern="\d[0-9]" class="form-control" id="formGroupExampleInput" placeholder="Количество">
             <div class="article"><span>Код товара : 2341</span></div>
-
             <button type="button" class="btn btn-danger">Купить</button>
 
-
-
-
         </div>
-
-
-
-
-
-
     </div>
-
-
-
-
-
-
 
     <!-- FOOTER -->
 
@@ -423,12 +430,7 @@
             }
 
             initPage() {
-                // this.checkNewItemQnt();
-                // this.showHiddenText();
                 this.showSubMenu();
-                // this.openDropSorting();
-                // this.itemImage()
-
             }
 
             openNav() {
@@ -440,44 +442,6 @@
                 document.getElementById("mySidebar").style.width = "0";
                 document.getElementById("main").style.marginLeft = "0";
             }
-
-            // checkNewItemQnt() {
-            //     let list = [...document.querySelector(".items").children];
-            //     const checkWidth = (screenSize) => {
-            //         if (screenSize <= 991) {
-            //             list.slice(6).forEach(element => element.remove());
-            //         }
-            //         if (screenSize <= 414) {
-            //             list.slice(4).forEach(element => element.remove());
-            //         }
-            //     }
-            //     checkWidth(window.screen.availWidth)
-            //     window.addEventListener("resize", function(event) {
-            //         checkWidth(window.screen.availWidth)
-            //     });
-
-            // }
-
-            // showHiddenText() {
-            //     let show = false;
-
-            //     let showHidden = document.querySelector('.show-hidden');
-            //     showHidden.innerHTML = 'Читать все';
-            //     let text = document.querySelector('.proscooters-info')
-
-            //     showHidden.addEventListener('click', () => {
-            //         if (!show) {
-            //             text.style = "height:auto; -webkit-mask-image:none";
-            //             showHidden.innerHTML = 'Скрить';
-
-            //         } else {
-            //             text.style = "height:20vh;-webkit-mask-image: -webkit-gradient(linear, left 20%, left bottom, from(black), to(rgba(0, 0, 0, 0)))";
-            //             showHidden.innerHTML = 'Читать все';
-            //         }
-            //         show = !show
-
-            //     })
-            // }
 
             showSubMenu() {
                 const li = [...mySidebar.children];
@@ -550,8 +514,6 @@
 
             }
 
-
-
             detectswipe() {
                 const swipe_det = {}
                 swipe_det.sX = 0;
@@ -594,32 +556,24 @@
                             console.error(top)
 
                             window.scrollBy({
-                                top: -400, // could be negative value
+                                top: -300, // could be negative value
                                 left: 0,
                                 behavior: 'smooth'
                             });
 
-
                         } else {
-                            // scrollElement.scrollIntoView({
-                            //     behavior: "smooth",
-                            //     block: "start",
-                            //     inline: "nearest"
-                            // });
 
                             window.scrollBy({
-                                top: 400, // could be negative value
+                                top: 300, // could be negative value
                                 left: 0,
                                 behavior: 'smooth'
                             });
                         }
                     }
 
-
                 }, false);
             }
         }
-
         const img = new Img()
     </script>
 
