@@ -324,10 +324,11 @@ header .head nav ul li:hover .sub-menu {
 
 .item.container {
     max-width: 1600px;
-    /* padding: 1rem 2rem; */
+}
+
+.item.container .item-details {
     display: flex;
     justify-content: space-around;
-    /* width: 60vw; */
 }
 
 .item.container .image-wrapper {
@@ -340,6 +341,7 @@ header .head nav ul li:hover .sub-menu {
     justify-content: center;
     margin-top: 2rem;
     font-size: 24px;
+    cursor: pointer;
 }
 
 .item.container .container {
@@ -476,6 +478,21 @@ header .head nav ul li:hover .sub-menu {
     color: gray;
 }
 
+.item.container .item-info .select {
+    width: 100%;
+    text-align-last: center;
+}
+
+.item.container .item-info .select option {
+    text-align: center;
+    text-align-last: center;
+    cursor: pointer;
+}
+
+.item.container .item-info .select option:disabled {
+    color: red
+}
+
 .item.container .item-info .article {
     width: 100%;
     display: flex;
@@ -488,7 +505,7 @@ header .head nav ul li:hover .sub-menu {
     width: 100%;
     height: 45px;
     text-align: center;
-    margin: 2rem 0;
+    cursor: pointer;
 }
 
 .item.container .item-info .form-control:focus {
@@ -516,7 +533,7 @@ header .head nav ul li:hover .sub-menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 3rem;
+    margin-top: 1rem;
 }
 
 .item.container .item-info .badge {
@@ -534,8 +551,10 @@ header .head nav ul li:hover .sub-menu {
 }
 
 @media screen and (max-width: 760px) {
-    .item.container {
+    .item.container .item-details {
         flex-direction: column;
+        display: flex;
+        justify-content: space-around;
     }
     .item.item.container .image-wrapper {
         width: 100%;
@@ -580,6 +599,217 @@ header .head nav ul li:hover .sub-menu {
         display: flex;
         justify-content: center;
         flex-direction: row-reverse;
+    }
+}
+
+
+/* RELATED */
+
+.news.container {
+    margin-top: 2rem;
+    max-width: 1600px;
+}
+
+.news a {
+    color: #212529;
+}
+
+.news h4 {
+    font-size: 18px;
+}
+
+.news .new-h5 {
+    display: flex;
+    justify-content: center;
+    color: #818181;
+    margin: 10px 0;
+    border-bottom: 1px solid rgba(145, 145, 145, 0.3);
+}
+
+.news .items {
+    margin-top: 30px;
+    justify-content: center;
+}
+
+.news .card {
+    border: none;
+    position: relative;
+    font-size: 10px
+}
+
+.news .sale-icon {
+    position: absolute;
+    right: 0;
+    font-size: 12px;
+}
+
+.news .new-icon {
+    position: absolute;
+    left: 0;
+}
+
+.news .card:hover {
+    opacity: 0.9;
+    z-index: 1;
+}
+
+.news .status {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 10px;
+    color: rgb(145, 145, 145);
+}
+
+.news .card .card-body {
+    padding: 1.25rem 0.5rem;
+}
+
+.news .card .status *:not(:first-child) {
+    margin-left: 30px;
+}
+
+.news .card:hover .status * {
+    color: black;
+}
+
+.news .status .availability {
+    color: red;
+}
+
+.news .card .add-to-bucket {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.news .card .add-to-bucket .icon-cart {
+    visibility: hidden;
+}
+
+.news .card:hover .add-to-bucket .icon-cart {
+    visibility: visible;
+    color: black;
+}
+
+.news .card .add-to-bucket .btn {
+    display: none;
+}
+
+.news .card .add-to-bucket .price {
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+.news .card .add-to-bucket .price .old-price {
+    font-size: 12px;
+    text-decoration: line-through;
+}
+
+.news .card .stars {
+    visibility: hidden;
+}
+
+.news .card .stars .icon-star-full {
+    font-size: 12px;
+}
+
+.news .card .stars .icon-star-empty {
+    font-size: 12px;
+    color: white;
+}
+
+.news .card:hover .stars {
+    visibility: visible;
+    color: black;
+}
+
+.news .card .parametrs {
+    position: absolute;
+    height: 0;
+    display: none;
+}
+
+
+/* .news a .card:hover .parametrs {
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    background-color: white;
+    color: black;
+    list-style: none;
+    padding-top: 10px;
+    font-size: 13px;
+    width: 100%;
+} */
+
+.news a .card:hover .parametrs li {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(145, 145, 145);
+    padding: 10px 0 4px 0;
+}
+
+.news a .card:focus .parametrs {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(145, 145, 145);
+    padding: 10px 0 4px 0;
+}
+
+@media screen and (max-width: 760px) {
+    .news .card .card-title {
+        font-size: 15px;
+    }
+    .news h4 {
+        font-size: 15px;
+    }
+    .news h5 {
+        font-size: 12px;
+    }
+    .news .sale-icon {
+        font-size: 12px
+    }
+    .news .new-icon {
+        font-size: 10px
+    }
+    .news .price {
+        font-size: 15px;
+    }
+    .news .card .add-to-bucket .icon-cart {
+        visibility: visible;
+        color: black;
+        font-size: 10px;
+    }
+    .news .card .stars {
+        visibility: visible;
+        color: black;
+    }
+    .news .status {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        font-size: 8px;
+        justify-content: space-between;
+    }
+    .news .status * {
+        flex-basis: 50%;
+    }
+    .news .card .status *:not(:first-child) {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .news .card .add-to-bucket .icon-cart {
+        visibility: visible;
+        color: black;
+        font-size: 15px;
+    }
+    .news .card .stars {
+        visibility: visible;
+        color: black;
     }
 }
 
