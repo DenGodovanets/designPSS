@@ -838,7 +838,8 @@ footer .bottom-logo a:hover {
         flex-direction: column-reverse;
     }
     .overlay .backet-body .total .promo-code {
-        width: 50%;
+        margin-top: 30px;
+        width: 60%;
     }
 }
 
