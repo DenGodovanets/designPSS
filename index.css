@@ -18,6 +18,13 @@ body .icon:hover {
     color: rgb(145, 145, 145);
 }
 
+body header.fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
 body header .container {
     max-width: 1600px;
 }
@@ -644,3 +651,205 @@ footer .bottom-logo a:hover {
         width: 100vw;
     }
 }
+
+
+/* BASKET */
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.overlay .header {
+    height: 132px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    background-color: white;
+    opacity: 0.3;
+}
+
+.overlay .backet-body {
+    background-color: white;
+    opacity: 0.9;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+.overlay .backet-body .table-wrapper {}
+
+.overlay .backet-body table {
+    max-height: 40vh;
+    overflow-y: auto;
+    max-width: 1600px;
+    border-bottom: 1px solid rgba(145, 145, 145, 0.3);
+}
+
+.overlay .backet-body table thead {
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.overlay .backet-body table td {
+    vertical-align: inherit;
+}
+
+.overlay .backet-body table .item {
+    display: flex;
+    align-items: center;
+}
+
+.overlay .backet-body table .item .item-size {
+    font-size: 8px;
+    color: gray;
+    font-weight: 400;
+}
+
+.overlay .backet-body table .item .title {
+    display: flex;
+    flex-direction: column;
+    white-space: wrap;
+    max-width: 30vw;
+    justify-content: space-around;
+    font-size: 10px;
+}
+
+.overlay .backet-body table .input-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.overlay .backet-body table input {
+    width: 3vw;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.overlay .backet-body table .item a {
+    color: black;
+}
+
+.overlay .backet-body table a.delete {
+    color: red;
+    font-size: 10px;
+    margin-top: 10px;
+}
+
+.overlay .backet-body table .img-wrapper {
+    width: 10vw;
+}
+
+.overlay .backet-body table img {
+    width: 100%;
+    height: auto;
+}
+
+.overlay .backet-body .price {
+    font-size: 22px;
+    display: flex;
+    flex-direction: column;
+}
+
+.overlay .backet-body .price .old-price {
+    font-size: 14px;
+    text-decoration: line-through;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+.overlay .backet-body .total {
+    display: flex;
+    justify-content: space-between;
+}
+
+.overlay .backet-body .total .promo-code {
+    width: 35%;
+}
+
+.overlay .backet-body .total .promo-code a {
+    color: gray;
+    font-size: 10px;
+    margin-top: -20px;
+}
+
+.overlay .backet-body .total .total-price {
+    display: flex;
+    flex-direction: column;
+    margin-right: 2rem;
+}
+
+@media screen and (max-height: 450px) {
+    .overlay a {
+        font-size: 20px
+    }
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .overlay .backet-body table input {
+        width: 5vw;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .overlay .header {
+        height: 100px;
+        cursor: pointer;
+    }
+    .overlay .backet-body table .item {
+        display: block;
+    }
+    .overlay .backet-body table .item h6 {
+        font-size: 10px;
+    }
+    .overlay .backet-body table a.delete {
+        font-size: 8px;
+    }
+    .overlay .backet-body table .img-wrapper {
+        width: 20vw;
+    }
+    .overlay .backet-body table input {
+        width: 8vw;
+        text-align: center;
+        border-radius: 10px;
+    }
+    .overlay .backet-body .total {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .overlay .backet-body .total .promo-code {
+        width: 50%;
+    }
+}
+
+
+/* .news .card .add-to-bucket .price {
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+}
+
+.news .card .add-to-bucket .price .old-price {
+    font-size: 12px;
+    text-decoration: line-through;
+} */
