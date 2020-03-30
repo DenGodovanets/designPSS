@@ -939,22 +939,25 @@
 
                     <div class="promo-code">
 
+
+
+                        <a href='#how get promo'>
+                            <span class="how-get-promo">Промокод на скидку. Как получить промокод?</span>
+
+                        </a>
                         <div class="input-group ">
-                            <input type="text" class="form-control" placeholder="ПРОМОКОД" aria-label="Recipient's username" aria-describedby="button-addon2">
+                            <input type="text" class="form-control" placeholder="Промокод" aria-label="Recipient's username" aria-describedby="button-addon2">
                             <div class="input-group-append">
                                 <button class="btn btn-outline-secondary" type="button" id="button-addon2">OK</button>
                             </div>
 
                         </div>
-                        <a href='#how get promo'>
-                            <span class="how-get-promo">Как получить промокод</span>
 
-                        </a>
 
                     </div>
 
                     <div class="total-price">
-                        <span id="totalPrice" class="total-price">Итого : 2400 Грн</span>
+                        <span id="totalPrice" class="total old-price">Итого : 2400 Грн</span>
                         <span id="discount" class="discount">Сума со скидкой : 2200 Грн</span>
                         <span id="freeShipping" class="free-shipping ">Доставка бесплатно</span>
                     </div>
@@ -963,18 +966,88 @@
 
             </div>
 
+            <div class="form container">
 
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
-            <div>1</div>
+
+                <form class="needs-validation" validate id="form">
+                    <div class="form-row">
+                        <div class="col-md-4 mb-3 mt-3">
+                            <label for="validationTooltip01"></label>
+                            <input type="text" class="form-control" id="validationTooltip01" value="" placeholder="Ваше ФИО" required>
+                            <div class="valid-tooltip">
+                                Looks good!
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="validationTooltip02"></label>
+                            <input type="number" class="form-control" id="validationTooltip02" value="" placeholder="Мобильной номер" required>
+                            <div class="valid-tooltip">
+                                Looks good!
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <label for="validationTooltipUsername"></label>
+                            <input type="email" class="form-control" id="validationTooltip02" value="" placeholder="Email (Не обязательно)">
+                            <div class="invalid-tooltip">
+                                Please choose a unique and valid username.
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="form-row">
+
+                        <div class="col-md-4 mb-3">
+                            <label for="validationTooltip04"></label>
+                            <select class="custom-select" id="validationTooltip04" required>
+                          <option selected disabled value="">Виберите город</option>
+                          <option>Киев</option>
+                        </select>
+                            <div class="invalid-tooltip">
+                                Please select a valid state.
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 mb-3">
+                            <label for="validationTooltip04"></label>
+                            <select class="custom-select" id="validationTooltip04" required>
+                          <option selected disabled value="">Виберите отделение Новой пошти</option>
+                          <option>Одетление номер........................................</option>
+                        </select>
+                            <div class="invalid-tooltip">
+                                Please select a valid state.
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 mb-3">
+                            <label for="validationTooltip04"></label>
+                            <select class="custom-select" id="validationTooltip04" required>
+                          <option selected disabled value="">Виберите способ оплати</option>
+                          <option>Оплата при получение на почте (Наложениий платеж)</option>
+                          <option>Оплата карткой</option>
+
+                        </select>
+                            <div class="invalid-tooltip">
+                                Please select a valid state.
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+                    <div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                        <label class="custom-control-label" for="customSwitch1">Если нужен другой вид доставки или оплати</label>
+                    </div>
+
+                    <button class="btn buy-button mt-3 w-100" type="submit">Купить</button>
+                </form>
+
+
+
+            </div>
+
+
 
 
 
@@ -1118,6 +1191,11 @@
             document.getElementById("basket").style.width = "0";
             deskopHeader[0].classList.remove("fixed");
         }
+
+
+        console.error(form)
+
+        form.addEventListener('submit', (e) => console.error(e));
     </script>
 
 </body>

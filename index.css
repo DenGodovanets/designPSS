@@ -794,6 +794,23 @@ footer .bottom-logo a:hover {
     margin-right: 2rem;
 }
 
+.overlay .backet-body .total .total-price .old-price {
+    text-decoration: line-through;
+}
+
+.overlay .backet-body .form {
+    height: 100%;
+}
+
+.overlay .backet-body .buy-button {
+    background-color: red;
+    color: white;
+}
+
+.overlay .backet-body .buy-button:hover {
+    background-color: black;
+}
+
 @media screen and (max-height: 450px) {
     .overlay a {
         font-size: 20px
@@ -839,18 +856,9 @@ footer .bottom-logo a:hover {
     }
     .overlay .backet-body .total .promo-code {
         margin-top: 30px;
-        width: 60%;
+        width: 100%;
+    }
+    .overlay .backet-body .custom-control-label {
+        font-size: 12px;
     }
 }
-
-
-/* .news .card .add-to-bucket .price {
-    font-size: 18px;
-    display: flex;
-    flex-direction: column;
-}
-
-.news .card .add-to-bucket .price .old-price {
-    font-size: 12px;
-    text-decoration: line-through;
-} */
