@@ -861,4 +861,13 @@ footer .bottom-logo a:hover {
     .overlay .backet-body .custom-control-label {
         font-size: 12px;
     }
+    .overlay .backet-body .form {
+        margin-bottom: 3rem;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .overlay .backet-body .form {
+        margin-bottom: 8rem;
+    }
 }
