@@ -573,11 +573,13 @@ s.sorting .drop-down .select-checkbox .deskop-rating>* {
 .items .sale-icon {
     position: absolute;
     right: 0;
+    font-size: 12px
 }
 
 .items .new-icon {
     position: absolute;
     left: 0;
+    font-size: 12px
 }
 
 .items .card:hover {
@@ -590,6 +592,10 @@ s.sorting .drop-down .select-checkbox .deskop-rating>* {
     justify-content: flex-start;
     font-size: 10px;
     color: rgb(145, 145, 145);
+}
+
+.items .status .availability {
+    color: red
 }
 
 .items .card .card-body {

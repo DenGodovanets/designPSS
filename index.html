@@ -707,7 +707,7 @@
     <div id="basket" class="overlay">
 
 
-        <div class="header" onclick="closeBacket()">
+        <div class="header" onclick="bucket.closeBacket()">
 
         </div>
 
@@ -969,27 +969,27 @@
             <div class="form container">
 
 
-                <form class="needs-validation" validate id="form">
+                <form class="needs-validation" novalidate id="form">
                     <div class="form-row mt-3">
                         <div class="col-md-4 mb-3">
                             <label for="validationTooltip01"></label>
                             <input type="text" class="form-control" id="validationTooltip01" value="" placeholder="Ваше ФИО" required>
                             <div class="valid-tooltip">
-                                Looks good!
+                                Введите ФИО
                             </div>
                         </div>
                         <div class="col-md-4 mb-3">
                             <label for="validationTooltip02"></label>
                             <input type="number" class="form-control" id="validationTooltip02" value="" placeholder="Мобильной номер" required>
                             <div class="valid-tooltip">
-                                Looks good!
+                                Введите мобильной номер
                             </div>
                         </div>
                         <div class="col-md-4 mb-3">
                             <label for="validationTooltipUsername"></label>
                             <input type="email" class="form-control" id="validationTooltip02" value="" placeholder="Email (Не обязательно)">
                             <div class="invalid-tooltip">
-                                Please choose a unique and valid username.
+                                Введите верный email
                             </div>
                         </div>
 
@@ -998,40 +998,38 @@
 
                         <div class="col-md-4 mb-3">
                             <label for="validationTooltip04"></label>
-                            <select class="custom-select" id="validationTooltip04" required>
+                            <select class="custom-select" id="validationTooltip04">
                           <option selected disabled value="">Виберите город</option>
                           <option>Киев</option>
                         </select>
                             <div class="invalid-tooltip">
-                                Please select a valid state.
+                                Виберите город доставки
                             </div>
                         </div>
 
                         <div class="col-md-4 mb-3">
                             <label for="validationTooltip04"></label>
-                            <select class="custom-select" id="validationTooltip04" required>
+                            <select class="custom-select" id="validationTooltip04">
                           <option selected disabled value="">Виберите отделение Новой пошти</option>
                           <option>Одетление номер........................................</option>
                         </select>
                             <div class="invalid-tooltip">
-                                Please select a valid state.
+                                Виберите отделение новой почты
                             </div>
                         </div>
 
                         <div class="col-md-4 mb-3">
                             <label for="validationTooltip04"></label>
-                            <select class="custom-select" id="validationTooltip04" required>
+                            <select class="custom-select" id="validationTooltip04">
                           <option selected disabled value="">Виберите способ оплати</option>
-                          <option>Оплата при получение на почте (Наложениий платеж)</option>
-                          <option>Оплата карткой</option>
+                          <option>Оплата при получение на почте (Наложенный платеж)</option>
+                          <option>Оплата картой</option>
 
                         </select>
                             <div class="invalid-tooltip">
-                                Please select a valid state.
+                                Виберите способ оплаты
                             </div>
                         </div>
-
-
 
                     </div>
 
@@ -1168,34 +1166,66 @@
         }
         const user = new User();
 
+        class Bucket {
 
 
+            constructor() {
+                const backet = [...document.querySelectorAll(".icon-shopping_cart-24px")];
+                backet.forEach(backetIcon => backetIcon.addEventListener('click', () => this.openBacket()))
+                form.addEventListener('submit', (e) => {
+                    console.error(e)
+                    if (form.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                });
+            }
 
-        const backet = [...document.querySelectorAll(".icon-shopping_cart-24px")];
+            openBacket() {
+                const deskopHeader = document.getElementsByTagName('header');
+                document.getElementById("basket").style.width = "100%";
+                deskopHeader[0].classList.add("fixed");
+            }
 
+            closeBacket() {
+                const deskopHeader = document.getElementsByTagName('header');
+                document.getElementById("basket").style.width = "0";
+                deskopHeader[0].classList.remove("fixed");
+            }
 
-        const deskopHeader = document.getElementsByTagName('header');
-
-
-        backet.forEach(backetIcon => backetIcon.addEventListener('click', () => openBacket()))
-
-
-
-        function openBacket() {
-            document.getElementById("basket").style.width = "100%";
-            deskopHeader[0].classList.add("fixed");
         }
 
+        const bucket = new Bucket()
 
-        function closeBacket() {
-            document.getElementById("basket").style.width = "0";
-            deskopHeader[0].classList.remove("fixed");
-        }
+        // function loadBucker() {
+        //     const backet = [...document.querySelectorAll(".icon-shopping_cart-24px")];
+        //     const deskopHeader = document.getElementsByTagName('header');
+        //     backet.forEach(backetIcon => backetIcon.addEventListener('click', () => openBacket()))
+
+        //     function openBacket() {
+        //         document.getElementById("basket").style.width = "100%";
+        //         deskopHeader[0].classList.add("fixed");
+        //     }
+
+        //     function closeBacket() {
+        //         document.getElementById("basket").style.width = "0";
+        //         deskopHeader[0].classList.remove("fixed");
+        //     }
+
+        //     form.addEventListener('submit', (e) => {
+        //         console.error(e)
+        //         if (form.checkValidity() === false) {
+        //             event.preventDefault();
+        //             event.stopPropagation();
+        //         }
+        //         form.classList.add('was-validated');
+        //     });
+
+        // }
 
 
-        console.error(form)
-
-        form.addEventListener('submit', (e) => console.error(e));
+        // loadBucker()
     </script>
 
 </body>

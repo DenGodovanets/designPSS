@@ -369,11 +369,13 @@ header .head nav ul li:hover .sub-menu {
 .news .sale-icon {
     position: absolute;
     right: 0;
+    font-size: 12px
 }
 
 .news .new-icon {
     position: absolute;
     left: 0;
+    font-size: 12px
 }
 
 .news .card:hover {
@@ -386,6 +388,10 @@ header .head nav ul li:hover .sub-menu {
     justify-content: flex-start;
     font-size: 10px;
     color: rgb(145, 145, 145);
+}
+
+.news .status .availability {
+    color: red
 }
 
 .news .card .card-body {
